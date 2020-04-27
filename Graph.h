@@ -10,7 +10,7 @@
 
 class Graph {
 public:
-    Graph(int size);
+    Graph(int size=100);
 
     bool add_vertex(std::string l);
     bool add_edge(std::string start_vertex, std::string end_vertex, int weight=1);
@@ -19,7 +19,7 @@ public:
 
     void bfs(std::string start_vertex);
     void dfs(std::string start_vertex);
-    void spanning_tree(std::string start_vertex);
+    void shortest_path(std::string start_vertex);
 private:
     Vertex* vertices;
     int** adj_matrix; // two-dimensional adjacency matrix
